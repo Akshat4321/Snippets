@@ -20,7 +20,7 @@ mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
 struct SEGTREE{
     vector<int> seg;
     int n;
-    SEGTREE(int n) : n(n), seg(4 * siz, 0){} 
+    SEGTREE(int n) : n(n), seg(4 * n, 0){} 
 
     void build(vector<int> &a , int l , int r , int pos){
         if (l==r){
