@@ -12,3 +12,24 @@ struct BIT {
 		return result;
 	}
 };
+
+void Solve() {
+    cin>>n>>q;
+    vi a(n+1);
+    BIT fen(n);
+    rep(i,1,n+1){
+        cin>>a[i];
+        update(i,a[i]);
+    }
+    while (q--){
+        int op , a1 , a2; cin>>op>>a1>>a2;
+        if (op==1){
+            update(a1 , a2-a[a1]);
+            a[a1] = a2;
+        }
+        else{
+             cout<<query(a2) - query(a1-1)<<endl;
+        }
+    }
+}
+
