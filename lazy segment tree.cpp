@@ -1,5 +1,5 @@
 //https://cses.fi/problemset/task/1651/
-
+// it tells the index
 
 #include <bits/stdc++.h>
  
